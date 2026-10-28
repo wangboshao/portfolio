@@ -1,0 +1,36 @@
+/* 导入 Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* 自定义主题变量：深色作品集配色 */
+@theme {
+  /* 主背景色 */
+  --color-night: #0a0a0a;
+  /* 卡片/面板背景色 */
+  --color-panel: #141418;
+  /* 主强调渐变色 */
+  --color-accent-from: #6366f1; /* 靛蓝 */
+  --color-accent-via: #a855f7;  /* 紫 */
+  --color-accent-to: #ec4899;   /* 粉 */
+}
+
+/* 全局基础样式：深色主题 */
+html {
+  /* 锚点导航平滑滚动 */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-night);
+  color: #ffffff;
+  /* 无衬线字体 */
+  font-family: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 渐变强调文字的通用样式 */
+.gradient-text {
+  background: linear-gradient(to right, var(--color-accent-from), var(--color-accent-via), var(--color-accent-to));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
